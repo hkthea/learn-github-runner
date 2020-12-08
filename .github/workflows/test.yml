@@ -27,7 +27,7 @@ jobs:
       - name: create build folder
         run: mkdir build
       - name: Run a one-line script
-        run: echo Hello, world! > build/test3.txt
+        run: echo Hello, world! > build/testong.txt
       - name: Artifact
         uses: actions/upload-artifact@v2
         with: 
