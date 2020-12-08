@@ -25,7 +25,7 @@ jobs:
           clean: false
       # Runs a single command using the runners shell
       - name: create build folder
-        run: mkdir build
+        run: mkdir build || echo skipped directory exists
       - name: Run a one-line script
         run: echo Hello, world! > build/testong.txt
       - name: Artifact
