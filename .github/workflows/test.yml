@@ -24,7 +24,7 @@ jobs:
     
       # Runs a single command using the runners shell
       - name: create build folder
-        run: mkdir build
+        run: mkdir build2
       - name: Run a one-line script
         run: echo Hello, world! > build/test3.txt
       - name: Artifact
