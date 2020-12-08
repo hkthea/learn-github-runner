@@ -24,8 +24,13 @@ jobs:
         with:
           clean: false
       # Runs a single command using the runners shell
-      - name: create build folder
-        run: mkdir build || echo skipped directory exists
+      - name: Check file existence
+        id: check_files
+        uses: andstor/file-existence-action@v1        
+
+      - name: create build folder if not exists
+        if: steps.check_files.build.file_exists == 'true'
+        run: mkdir build
       - name: Run a one-line script
         run: echo Hello, world! > build/testong.txt
       - name: Artifact
